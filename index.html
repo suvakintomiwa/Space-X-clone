@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpaceX Clone</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMRrjxgNg8qaHqoQ5JBf_7o23NgV3pa-tunQ&s" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Video container setup */
+    .video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .video-container video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    /* Hover effects */
+    .nav-link:hover {
+      color: #9ca3af;
+      transition: color 0.3s ease;
+    }
+
+    .btn-hover:hover {
+      background-color: white;
+      color: black;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50 py-5 px-4 md:px-12 bg-black bg-opacity-70 backdrop-blur-sm flex justify-between items-center">
+    <a href="#" class="text-xl font-bold">SPACEX</a>
+
+    <!-- Centered Navigation -->
+    <nav class="hidden md:flex space-x-8 text-sm font-medium mx-auto">
+      <a href="#" class="nav-link">FALCON 9</a>
+      <a href="#" class="nav-link">FALCON HEAVY</a>
+      <a href="#" class="nav-link">DRAGON</a>
+      <a href="#" class="nav-link">STARSHIP</a>
+      <a href="#" class="nav-link">HUMAN SPACEFLIGHT</a>
+      <a href="#" class="nav-link">RIDESHARE</a>
+      <a href="#" class="nav-link">STARLINK</a>
+      <a href="#" class="nav-link">SHOP</a>
+    </nav>
+
+    <div id="launch-countdown" class="hidden md:block text-sm font-medium text-gray-300"></div>
+
+    
+    <div class="md:hidden text-xl cursor-pointer">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+
+  <section class="relative h-screen flex items-center justify-start pl-8 md:pl-16 pt-20">
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="/images/video (4).mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    </div>
+
+    <div class="text-left z-10 max-w-2xl px-4">
+      <p class="countdown-number text-2xl md:text-3xl font-bold mb-4">T-Loading...</p>
+      <h2 class="text-lg md:text-xl font-normal mb-8">STARSHIP'S ELEVENTH FLIGHT TEST</h2>
+      <a href="#" class="inline-block border-2 border-white text-white py-3 px-8 text-sm font-medium btn-hover">VIEW LAUNCH</a>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-start pl-8 md:pl-16">
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="/images/video (5).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    </div>
+
+    <div class="text-left z-10 max-w-3xl px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">STARSHIP</h1>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl">Fully Reusable Transportation to Earth Orbit, the Moon, Mars, and Beyond</p>
+      <a href="#" class="inline-block border-2 border-white text-white py-3 px-8 text-sm font-medium btn-hover">LEARN MORE</a>
+    </div>
+  </section>
+
+  <!-- Other Sections -->
+  <section class="relative h-screen flex items-center justify-start pl-8 md:pl-16 bg-cover bg-center" style="background-image: url('/images/launch.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="text-left z-10 max-w-3xl px-4">
+      <h1 class="text-3xl md:text-5xl font-bold mb-6">RIDESHARE PROGRAM</h1>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl">Small satellite operators can now book rides to orbit on SpaceX's Falcon 9 and Falcon Heavy rockets.</p>
+      <a href="#" class="inline-block border-2 border-white text-white py-3 px-8 text-sm font-medium btn-hover">LEARN MORE</a>
+    </div>
+  </section>
+
+  <section class="relative h-screen flex items-center justify-start pl-8 md:pl-16 bg-cover bg-center" style="background-image: url('/images/mission spacex.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="text-left z-10 max-w-3xl px-4">
+      <h1 class="text-3xl md:text-5xl font-bold mb-6">STARLINK MISSION</h1>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl">Providing high-speed, low-latency broadband internet across the globe.</p>
+      <a href="#" class="inline-block border-2 border-white text-white py-3 px-8 text-sm font-medium btn-hover">LEARN MORE</a>
+    </div>
+  </section>
+
+  <section class="relative h-screen flex items-center justify-start pl-8 md:pl-16 bg-cover bg-center" style="background-image: url('/images/crew2.webp');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="text-left z-10 max-w-3xl px-4">
+      <h1 class="text-3xl md:text-5xl font-bold mb-6">CREW DRAGON</h1>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl">Returning human spaceflight capabilities to the United States.</p>
+      <a href="#" class="inline-block border-2 border-white text-white py-3 px-8 text-sm font-medium btn-hover">LEARN MORE</a>
+    </div>
+  </section>
+
+  <section class="relative h-screen flex items-center justify-start pl-8 md:pl-16 bg-cover bg-center" style="background-image: url('/images/mars.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="text-left z-10 max-w-3xl px-4">
+      <h1 class="text-3xl md:text-5xl font-bold mb-6">MAKING LIFE MULTIPLANETARY</h1>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl">Building a future where humanity is out exploring the stars.</p>
+      <a href="#" class="inline-block border-2 border-white text-white py-3 px-8 text-sm font-medium btn-hover">LEARN MORE</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12 px-4 text-center">
+    <div class="footer-logo text-xl font-bold mb-8">SPACEX © 2026</div>
+    <div class="footer-links flex flex-wrap justify-center gap-6 mb-10">
+      <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">TWITTER</a>
+      <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">YOUTUBE</a>
+      <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">INSTAGRAM</a>
+      <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">FLICKR</a>
+      <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">LINKEDIN</a>
+      <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">PRIVACY POLICY</a>
+      <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">SUPPLIERS</a>
+    </div>
+    <div class="social-links flex justify-center gap-6 mb-8">
+      <a href="#" class="text-white hover:text-gray-400 transition-colors"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white hover:text-gray-400 transition-colors"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="text-white hover:text-gray-400 transition-colors"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white hover:text-gray-400 transition-colors"><i class="fab fa-flickr"></i></a>
+      <a href="#" class="text-white hover:text-gray-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="copyright text-xs text-gray-500">
+      FOR EDUCATIONAL PURPOSES ONLY | NOT THE OFFICIAL SPACEX WEBSITE
+    </div>
+  </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
