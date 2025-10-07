@@ -21,8 +21,3 @@
 
     setInterval(updateCountdown, 1000);
     updateCountdown();
-
-    // Mobile Menu Toggle
-    document.querySelector('.fa-bars').addEventListener('click', () => {
-      alert('Mobile menu would open here');
-    });
