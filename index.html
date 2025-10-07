@@ -56,7 +56,7 @@
       transition: all 0.3s ease;
     }
     
-    /* Responsive text sizing */
+    
     .responsive-heading {
       font-size: clamp(2rem, 5vw, 4rem);
     }
@@ -65,47 +65,141 @@
       font-size: clamp(1rem, 2.5vw, 1.5rem);
     }
     
-    /* Background image responsiveness */
+
     .responsive-bg {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #aaa;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+/* Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 50;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo img {
+  height: 45px;
+  width: 100px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover img {
+  opacity: 1;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 0.9rem;
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* Countdown Section */
+.launch-countdown {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 500;
+}
+
+/* Mobile Menu Icon */
+.mobile-menu {
+  display: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .launch-countdown {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
   </style>
-</head>
-<body class="bg-black text-white">
+<!-- Header -->
+<header class="header">
+  <!-- Logo -->
+  <a href="/" class="logo">
+    <img 
+      src="https://www.logo.wine/a/logo/SpaceX/SpaceX-Logo.wine.svg"
+      alt="SpaceX Logo"
+    />
+  </a>
 
-  <!-- Header -->
-  <header class="fixed top-0 left-0 w-full z-50 py-3 md:py-5 px-4 md:px-12 bg-black/70 backdrop-blur-sm flex justify-between items-center">
-    
-    <!-- Logo -->
-    <a href="/" class="flex items-center">
-      <img 
-        src="/images/SpaceX_idIszFC0pU_0.svg" 
-        alt="SpaceX Logo" 
-        class="h-6 md:h-10 w-auto transition-transform duration-300 hover:scale-105" 
-      />
-    </a>
-    
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex space-x-6">
-      <a href="#" class="hover:text-white transition-colors">FALCON HEAVY</a>
-      <a href="#" class="hover:text-white transition-colors">DRAGON</a>
-      <a href="#" class="hover:text-white transition-colors">STARSHIP</a>
-      <a href="#" class="hover:text-white transition-colors">HUMAN SPACEFLIGHT</a>
-      <a href="#" class="hover:text-white transition-colors">RIDESHARE</a>
-      <a href="#" class="hover:text-white transition-colors">STARLINK</a>
-      <a href="#" class="hover:text-white transition-colors">SHOP</a>
-    </nav>
+  <!-- Desktop Navigation -->
+  <nav class="nav-links">
+    <a href="#">FALCON HEAVY</a>
+    <a href="#">DRAGON</a>
+    <a href="#">STARSHIP</a>
+    <a href="#">HUMAN SPACEFLIGHT</a>
+    <a href="#">RIDESHARE</a>
+    <a href="#">STARLINK</a>
+    <a href="#">SHOP</a>
+  </nav>
 
-    <!-- Countdown or secondary content -->
-    <div id="launch-countdown" class="hidden md:block text-sm font-medium text-gray-400"></div>
+  <!-- Countdown / Extra -->
+  <div id="launch-countdown" class="launch-countdown">20:00:00</div>
 
-    <!-- Mobile menu icon -->
-    <div id="mobile-menu-toggle" class="md:hidden text-white text-2xl cursor-pointer">
-      <i class="fas fa-bars"></i>
-    </div>
-  </header>
+  <!-- Mobile Menu Icon -->
+  <div id="mobile-menu-toggle" class="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-full bg-black/95 backdrop-blur-md z-40 flex flex-col items-center justify-center space-y-8 text-xl transform -translate-y-full transition-transform duration-300">
@@ -125,7 +219,7 @@
   <section class="relative h-screen flex items-center justify-start px-4 md:pl-16 pt-16 md:pt-20">
     <div class="video-container">
       <video autoplay muted loop playsinline>
-        <source src="https://sxcontent9668.azureedge.us/cms-assets/assets/20250929_Flight11_Website_916_V4_b70ce676b7.mp4" type="video/mp4" />
+        <source src="/images/video (5).mp4" type="video/mp4" />
       </video>
       <div class="absolute inset-0 bg-black bg-opacity-40"></div>
     </div>
@@ -141,7 +235,7 @@
   <section class="relative h-screen flex items-center justify-start px-4 md:pl-16">
     <div class="video-container">
       <video autoplay muted loop playsinline>
-        <source src="/images/video (5).mp4" type="video/mp4" />
+        <source src="/images/video (4).mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="absolute inset-0 bg-black bg-opacity-40"></div>
