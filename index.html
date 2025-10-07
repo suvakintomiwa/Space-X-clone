@@ -55,28 +55,37 @@
 <body class="bg-black text-white">
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 w-full z-50 py-5 px-4 md:px-12 bg-black bg-opacity-70 backdrop-blur-sm flex justify-between items-center">
-    <a href="#" class="text-xl font-bold">SPACEX</a>
+<header class="fixed top-0 left-0 w-full z-50 py-5 px-4 md:px-12 bg-black/70 backdrop-blur-sm flex justify-between items-center">
+  
+  <!-- Logo -->
+  <a href="/" class="flex items-center">
+    <img 
+      src="/images/SpaceX_idIszFC0pU_0.svg" 
+      alt="SpaceX Logo" 
+      class="h-8 md:h-10 w-auto transition-transform duration-300 hover:scale-105" 
+    />
+  </a>
 
-    <!-- Centered Navigation -->
-    <nav class="hidden md:flex space-x-8 text-sm font-medium mx-auto">
-      <a href="#" class="nav-link">FALCON 9</a>
-      <a href="#" class="nav-link">FALCON HEAVY</a>
-      <a href="#" class="nav-link">DRAGON</a>
-      <a href="#" class="nav-link">STARSHIP</a>
-      <a href="#" class="nav-link">HUMAN SPACEFLIGHT</a>
-      <a href="#" class="nav-link">RIDESHARE</a>
-      <a href="#" class="nav-link">STARLINK</a>
-      <a href="#" class="nav-link">SHOP</a>
-    </nav>
+  <!-- Centered Navigation -->
+  <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+    <a href="#" class="hover:text-white transition-colors">FALCON 9</a>
+    <a href="#" class="hover:text-white transition-colors">FALCON HEAVY</a>
+    <a href="#" class="hover:text-white transition-colors">DRAGON</a>
+    <a href="#" class="hover:text-white transition-colors">STARSHIP</a>
+    <a href="#" class="hover:text-white transition-colors">HUMAN SPACEFLIGHT</a>
+    <a href="#" class="hover:text-white transition-colors">RIDESHARE</a>
+    <a href="#" class="hover:text-white transition-colors">STARLINK</a>
+    <a href="#" class="hover:text-white transition-colors">SHOP</a>
+  </nav>
 
-    <div id="launch-countdown" class="hidden md:block text-sm font-medium text-gray-300"></div>
+  <!-- Countdown or secondary content -->
+  <div id="launch-countdown" class="hidden md:block text-sm font-medium text-gray-400"></div>
 
-    
-    <div class="md:hidden text-xl cursor-pointer">
-      <i class="fas fa-bars"></i>
-    </div>
-  </header>
+  <!-- Mobile menu icon -->
+  <div class="md:hidden text-white text-2xl cursor-pointer">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
 
 
   <section class="relative h-screen flex items-center justify-start pl-8 md:pl-16 pt-20">
